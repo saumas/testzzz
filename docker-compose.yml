@@ -14,7 +14,8 @@ services:
       - jenkins-data:/var/jenkins_home
 
   jenkins:
-    image: jenkins/jenkins:jdk17-preview
+    build:
+      context: jenkins
     networks:
       - jenkins
     links:

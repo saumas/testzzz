@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'hello-world' }
+        docker { image 'ubuntu' }
     }
     stages {
         stage('Test') {
             steps {
-                sh '/hello'
+                sh 'echo LOL!'
             }
         }
     }
