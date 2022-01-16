@@ -33,6 +33,14 @@ services:
     depends_on:
       - dind
 
+  selenium-hub:
+    image: selenium/standalone-chrome:4.1.1-20211217
+    ports:
+      - "4444:4444"
+    shm_size: 2g
+    networks:
+      - jenkins
+
 networks:
   jenkins:
 
